@@ -36,7 +36,7 @@ guessBtn.addEventListener('click', function(){
         }else {
             //not winning
             //guessleft and game over
-            guessLeft -= 1; //?????????????????
+            guessLeft -= 1; //for decrementing the guessleft values
             if(guessLeft === 0){
                 guess.disabled = true;
                
