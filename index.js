@@ -14,6 +14,7 @@ var guessText = document.querySelector('.guess_text');
 
 minNum.textContent = min;
 maxNum.textContent = max;
+        guessText.focus();
 
 guessBtn.addEventListener('click', function(){
     //entering a absurd number
@@ -30,6 +31,8 @@ guessBtn.addEventListener('click', function(){
          
     guessInput.style.border = 'green';
     setMessege(` ${winning} is correct , YOU WON`, 'green'); 
+                    guessText.focus();
+
         }else {
             //not winning
             //guessleft and game over
@@ -39,6 +42,8 @@ guessBtn.addEventListener('click', function(){
                
                
     setMessege(` YOU LOST, ${winning} is correct answer `, 'red'); 
+                        guessText.focus();
+
 
             }else{
                 //guessleft and game continues
@@ -46,6 +51,8 @@ guessBtn.addEventListener('click', function(){
     setMessege(` ${guessLeft} guesses left` , 'red');
             
                 guessInput.value = "";
+                        guessText.focus();
+
 
             }
 
